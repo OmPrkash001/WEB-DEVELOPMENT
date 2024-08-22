@@ -1,68 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <form>
-      <fieldset>
-        <legend>User form</legend>
+    <title>User Form</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+</head>
+<body>
+    <form id="userForm">
         <fieldset>
-          <legend>User Information</legend>
-          <label for="name">Name: </label>
-          <input
-            id="name"
-            type="text"
-            name="user"
-            required
-            minlength="4"
-            maxlength="16"
-          />
-          <br />
-          <br />
-          <label for="email">email: </label>
-          <input id="email" name="userEmail" type="email" />
-          <br />
-          <br />
-          <label for="">number: </label>
-          <input type="number" name="userNumber" id="number" min="5" max="10" />
+            <legend>User Form</legend>
+            <fieldset>
+                <legend>User Information</legend>
+                <label for="name">Name: </label>
+                <input
+                    id="name"
+                    type="text"
+                    name="user"
+                    required
+                    minlength="4"
+                    maxlength="16"
+                />
+                <br /><br />
+
+                <label for="email">Email: </label>
+                <input
+                    id="email"
+                    name="userEmail"
+                    type="email"
+                    required
+                />
+                <br /><br />
+
+                <label for="number">Number (5-10): </label>
+                <input
+                    type="number"
+                    name="userNumber"
+                    id="number"
+                    min="5"
+                    max="10"
+                    required
+                />
+            </fieldset>
+
+            <fieldset>
+                <legend>General Questions</legend>
+                <h4>Radio Input</h4>
+                <h5>This is question 1</h5>
+                <input type="radio" name="q1" value="option 1" id="q1-option1" required />
+                <label for="q1-option1">Option 1</label>
+
+                <input type="radio" name="q1" value="option 2" id="q1-option2" required />
+                <label for="q1-option2">Option 2</label>
+
+                <input type="radio" name="q1" value="option 3" id="q1-option3" required />
+                <label for="q1-option3">Option 3</label>
+                <br /><br />
+
+                <label for="dropdown">Select an Option: </label>
+                <select name="dropdown" id="dropdown" required>
+                    <option value="">Select an option</option>
+                    <option value="opt. 1">Option 1</option>
+                    <option value="opt. 2">Option 2</option>
+                    <option value="opt. 3">Option 3</option>
+                </select>
+            </fieldset>
+            <br /><br />
+            <button type="submit">Submit</button>
         </fieldset>
-
-        <fieldset>
-          <legend>General Questions</legend>
-          <h4>Radio Input</h4>
-          <h5>This is question 1</h5>
-          <input type="radio" name="q1" value="option 1" id="" />
-          <label for="">option 1</label>
-
-          <input type="radio" name="q1" value="OPTION 2" id="" />
-          <label for="">option 2</label>
-
-          <input type="radio" name="q1" value="option 3" id="" />
-          <label for="">option 3</label>
-          <br /><br />
-          <select name="dropdown" id="">
-            <option value="opt. 1">Option 1</option>
-            <option value="opt. 2">Option 2</option>
-            <option value="opt. 3">Option 3</option>
-          </select>
-          <!-- 
-    <h5>This is question 2</h5>
-    <input type="radio" name="q2" id="">
-    <label for="">option 1</label>
-
-    <input type="radio" name="q2" id="">
-    <label for="">option 2</label>
-
-    <input type="radio" name="q2" id="">
-    <label for="">option 3</label> -->
-        </fieldset>
-        <br />
-        <br />
-        <button>submit</button>
-      </fieldset>
     </form>
-  </body>
+
+    <div id="message" style="display: none; margin-top: 20px;"></div>
+
+    <script src="/JS/script.js"></script>
+</body>
 </html>
